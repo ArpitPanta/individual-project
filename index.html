@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-icon">&#10033;</span>
+                <span>calendar</span>
+            </div>
+
+            <div class="clock-box">
+                <span id="clock">00:00:00</span>
+                <span id="clockSeconds" class="clock-seconds"></span>
+            </div>
+        </header>
+
+        <section class="layout">
+            <div class="calendar-card">
+                <div class="calendar-head">
+                    <div>
+                        <h2 id="monthYear"></h2>
+                    </div>
+
+                    <div class="month-buttons">
+                        <button id="previousMonth" aria-label="Previous month">&#8249;</button>
+                        <button id="nextMonth" aria-label="Next month">&#8250;</button>
+                    </div>
+                </div>
+
+                <div class="weekdays">
+                    <span>MON</span>
+                    <span>TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+                </div>
+
+                <div id="calendar" class="calendar-grid"></div>
+
+                <div class="calendar-hint">
+                    <span class="legend-dot"></span>
+                    <span>Has a reminder</span>
+                    <span class="hint-divider">&middot;</span>
+                    <span>Double-click a date to add one</span>
+                </div>
+            </div>
+
+            <aside class="day-card">
+                <div class="day-card-top">
+                    <span class="eyebrow">YOUR DAY</span>
+                    <span class="sun-icon">&#9788;</span>
+                </div>
+
+                <div class="selected-date">
+                    <span id="selectedWeekday" class="selected-weekday"></span>
+                    <span id="selectedDay" class="selected-day"></span>
+                </div>
+
+                <div class="events-heading">
+                    <h3>Reminders</h3>
+                    <span id="eventCount" class="event-count">0</span>
+                </div>
+
+                <div id="eventList" class="event-list"></div>
+
+                <p id="emptyMessage" class="empty-message">
+                    Nothing planned yet.<br>
+                    Enjoy the open space.
+                </p>
+
+                <div class="add-tip">
+                    <span>&#43;</span>
+                    Double-click any day to add a reminder
+                </div>
+            </aside>
+        </section>
+
+        <footer>
+            Make room for what matters
+            <span>&#10033;</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
